@@ -4,7 +4,7 @@ from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 from generator.generator import generated_person
-from locators.elements_page_locators import TextBoxPageLocators
+from locators.elements_page_locators import TextBoxPageLocators, CheckBoxPageLocators
 from pages.base_page import BasePage
 
 
@@ -41,3 +41,6 @@ class TextBoxPage(BasePage):
         except NoSuchElementException:
             return None
 
+
+class CheckBoxPage(BasePage):
+    locators = CheckBoxPageLocators()

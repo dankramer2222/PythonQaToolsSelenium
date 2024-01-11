@@ -2,7 +2,7 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-from pages.elements_page import TextBoxPage
+from pages.elements_page import TextBoxPage, CheckBoxPage
 
 
 class TestElements:
@@ -18,5 +18,10 @@ class TestElements:
             assert email == output_email, "the email name doesn't match"
             assert current_address.replace("\n", " ") == output_cur_addr, "the current address name doesn't match"
             assert permanent_address.replace("\n", " ") == output_per_addr, "the permanent address name doesn't match"
+
+    class TestCheckBox:
+        def test_check_box(self,driver):
+            check_box_page = CheckBoxPage(driver,"https://demoqa.com/checkbox")
+            check_box_page.open()
 
 
