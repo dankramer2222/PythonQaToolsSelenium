@@ -2,7 +2,6 @@ from selenium.webdriver.common.by import By
 
 
 class TextBoxPageLocators:
-
     FULL_NAME = (By.CSS_SELECTOR, "input[id='userName']")
     EMAIL = (By.CSS_SELECTOR, 'input[id="userEmail"]')
     CURRENT_ADDRESS = (By.CSS_SELECTOR, 'textarea[id="currentAddress"]')
@@ -16,7 +15,6 @@ class TextBoxPageLocators:
 
 
 class CheckBoxPageLocators:
-
     EXPAND_ALL_BUTTON = (By.CSS_SELECTOR, 'button[title="Expand all"]')
     ITEM_LIST = (By.CSS_SELECTOR, 'span[class="rct-title"]')
     CHECKED_ITEMS = (By.CSS_SELECTOR, "svg[class='rct-icon rct-icon-check")
@@ -32,7 +30,8 @@ class RadioButtonPageLocators:
 
 
 class WebTablePageLocators:
-    ADD_BUTTON = (By.CSS_SELECTOR,'button[id="addNewRecordButton"]' )
+    # add person form
+    ADD_BUTTON = (By.CSS_SELECTOR, 'button[id="addNewRecordButton"]')
     FIRSTNAME_INPUT = (By.CSS_SELECTOR, 'input[placeholder="First Name"]')
     LASTNAME_INPUT = (By.CSS_SELECTOR, 'input[placeholder="Last Name"]')
     EMAIL_INPUT = (By.CSS_SELECTOR, 'input[id="userEmail"]')
@@ -40,3 +39,6 @@ class WebTablePageLocators:
     SALARY_INPUT = (By.CSS_SELECTOR, 'input[placeholder="Salary"]')
     DEPARTMENT_INPUT = (By.CSS_SELECTOR, 'input[placeholder="Department"]')
     SUBMIT = (By.CSS_SELECTOR, 'button[id="submit"]')
+
+    # tables
+    FULL_PEOPLE_LIST = (By.CSS_SELECTOR, 'div[class="rt-tr-group"]')
