@@ -2,7 +2,8 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-from pages.elements_page import TextBoxPage, CheckBoxPage, RadioButtonPage
+from generator.generator import generated_person
+from pages.elements_page import TextBoxPage, CheckBoxPage, RadioButtonPage, WebTablePage
 
 
 class TestElements:
@@ -44,3 +45,10 @@ class TestElements:
             assert output_impressive == "Impressive", "'Impressive' have not been selected"
             assert output_no == "No", "'No' have not been selected"
 
+    class TestWebTable:
+
+        def test_web_table_add_person(self, driver):
+            web_table_page = WebTablePage(driver, "https://demoqa.com/webtables")
+            web_table_page.open()
+            web_table_page.add_new_person()
+            time.sleep(5)
