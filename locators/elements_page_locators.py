@@ -50,3 +50,15 @@ class WebTablePageLocators:
 
     # update
     UPDATE_BUTTON = (By.CSS_SELECTOR, 'span[title="Edit"]')
+
+
+class ButtonsPageLocators:
+    DOUBLE_CLICK_BUTTON = (By.CSS_SELECTOR, 'button[id="doubleClickBtn]"')
+    RIGHT_CLICK_BUTTON = (By.CSS_SELECTOR, 'button[id="rightClickBtn"]')
+    CLICK_ME_BUTTON = (By.CSS_SELECTOR, "div[class='mt-4']:nth-child(3n)")
+
+    # result
+    SUCCESS_DOUBLE_CLICK_OUTPUT = (By.CSS_SELECTOR, 'p[id="doubleClickMessage"]')
+    SUCCESS_RIGHT_CLICK_BUTTON_OUTPUT = (By.CSS_SELECTOR, 'p[id="rightClickMessage"]')
+    SUCCESS_CLICK_ME_BUTTON_OUTPUT = (By.CSS_SELECTOR, 'p[id="dynamicClickMessage"]')
+
