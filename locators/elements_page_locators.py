@@ -53,9 +53,9 @@ class WebTablePageLocators:
 
 
 class ButtonsPageLocators:
-    DOUBLE_CLICK_BUTTON = (By.CSS_SELECTOR, 'button[id="doubleClickBtn]"')
-    RIGHT_CLICK_BUTTON = (By.CSS_SELECTOR, 'button[id="rightClickBtn"]')
-    CLICK_ME_BUTTON = (By.CSS_SELECTOR, "div[class='mt-4']:nth-child(3n)")
+    DOUBLE_BUTTON = (By.CSS_SELECTOR, "button[id='doubleClickBtn']")
+    RIGHT_CLICK_BUTTON = (By.CSS_SELECTOR, "button[id='rightClickBtn']")
+    CLICK_ME_BUTTON = (By.XPATH, "//div[3]/button")
 
     # result
     SUCCESS_DOUBLE_CLICK_OUTPUT = (By.CSS_SELECTOR, 'p[id="doubleClickMessage"]')

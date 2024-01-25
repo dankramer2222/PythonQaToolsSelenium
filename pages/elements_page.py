@@ -167,16 +167,17 @@ class WebTablePage(BasePage):
         return len(list_rows)
 class ButtonsPage(BasePage):
     locators = ButtonsPageLocators()
+
     def click_on_different_button(self, type_click):
         if type_click == "double":
-            self.action_double_click(self.element_is_visible(self.locators.DOUBLE_CLICK_BUTTON))
-            return self.check_clicked_on_the_button(self.locators.SUCCESS_DOUBLE_CLICK_OUTPUT)
+            self.action_double_click(self.element_is_visible(self.locators.DOUBLE_BUTTON))
+            return self.check_clicked_on_the_button(self.locators.SUCCESS_DOUBLE)
         if type_click == "right":
             self.action_right_click(self.element_is_visible(self.locators.RIGHT_CLICK_BUTTON))
-            return self.check_clicked_on_the_button(self.locators.SUCCESS_RIGHT_CLICK_BUTTON_OUTPUT)
+            return self.check_clicked_on_the_button(self.locators.SUCCESS_RIGHT)
         if type_click == "click":
             self.element_is_visible(self.locators.CLICK_ME_BUTTON).click()
-            return self.check_clicked_on_the_button(self.locators.SUCCESS_CLICK_ME_BUTTON_OUTPUT)
+            return self.check_clicked_on_the_button(self.locators.SUCCESS_CLICK_ME)
 
     def check_clicked_on_the_button(self, element):
         return self.element_is_present(element).text
